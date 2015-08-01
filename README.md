@@ -40,4 +40,4 @@ In order to build mirctolk.dll from source, do the following.
 	* nvdaControllerClient32.dll from lib\x86
 	* SAAPI32.dll from lib\x86
 	* Tolk.h from src
-3. Either run compile-mingw.bat or compile-msvc.bat, depending on the compiler being used. Note that the batch scripts expect the compiler to be in the path.
+3. Either run compile-gcc.bat or compile-msvc.bat, depending on the compiler being used. Note that the batch scripts expect the compiler to be in the path.
