@@ -1,0 +1,11 @@
+LIBRARY tolkbridge
+EXPORTS
+LoadDll
+UnloadDll
+output
+output_interrupt
+speak
+speak_interrupt
+silence
+braille
+detect_screenreader
