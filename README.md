@@ -32,12 +32,13 @@ Print the name of the currently running screen reader:
 
 ## Compiling
 In order to build mirctolk.dll from source, do the following.
-1.  Either build Tolk from [source](https://github.com/dkager/tolk "Tolk GitHub Page"), or download the most recent [binary release](http://davykager.com/files/tolk/tolk-latest.zip "Tolk Binaries Direct Link").
-2.  Copy the following files from the Tolk distribution to the src directory of this repository.
-	* Tolk.dll from bin\x86
-	* Tolk.lib from bin\x86 (Needed if compiling with MSVC)
-	* dolapi32.dll from lib\x86
-	* nvdaControllerClient32.dll from lib\x86
-	* SAAPI32.dll from lib\x86
-	* Tolk.h from src
-3.  Either run compile-gcc.bat or compile-msvc.bat, depending on the compiler being used. Note that the batch scripts expect the compiler to be in the path.
+
+1. Either build Tolk from [source](https://github.com/dkager/tolk "Tolk GitHub Page"), or download the most recent [binary release](http://davykager.com/files/tolk/tolk-latest.zip "Tolk Binaries Direct Link").
+2. Copy the following files from the Tolk distribution to the src directory of this repository.
+  * Tolk.dll from bin\x86
+  * Tolk.lib from bin\x86 (Needed if compiling with MSVC)
+  * dolapi32.dll from lib\x86
+  * nvdaControllerClient32.dll from lib\x86
+  * SAAPI32.dll from lib\x86
+  * Tolk.h from src
+3. Either run compile-gcc.bat or compile-msvc.bat, depending on the compiler being used. Note that the batch scripts expect the compiler to be in the path.
