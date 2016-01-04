@@ -35,6 +35,7 @@ typedef struct {
 void __declspec(dllexport) __stdcall LoadDll(LOADINFO *lInfo) {
     lInfo->mKeep = TRUE;
     lInfo->mUnicode = TRUE;
+    Tolk_TrySAPI(TRUE);
     Tolk_Load();
 }
 
