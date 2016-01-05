@@ -20,6 +20,8 @@ The DLL provides the following functions.
 * braille - Braille a string.
 * silence - Cancel speech.
 * detect_screenreader - Return the name of the currently running screen reader or NULL.
+* try_sapi - If '1' is passed to this function, SAPI will be added to the end of the list of possible speech outputs.
+* prefer_sapi - If '1' is passed to this function and try_sapi is enabled, Tolk will try speaking text using SAPI before any other outputs.
 
 ### Examples
 Speak and braille some text:

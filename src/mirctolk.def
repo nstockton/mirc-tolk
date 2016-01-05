@@ -9,3 +9,5 @@ speak_interrupt
 silence
 braille
 detect_screenreader
+try_sapi
+prefer_sapi

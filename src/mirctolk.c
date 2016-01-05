@@ -35,7 +35,6 @@ typedef struct {
 void __declspec(dllexport) __stdcall LoadDll(LOADINFO *lInfo) {
     lInfo->mKeep = TRUE;
     lInfo->mUnicode = TRUE;
-    Tolk_TrySAPI(TRUE);
     Tolk_Load();
 }
 
@@ -86,4 +85,24 @@ int __declspec(dllexport) __stdcall detect_screenreader(HWND mWnd, HWND aWnd, wc
         FMT_SWPRINTF(data, sizeof(name) + 1, name);
     }
     return MIRC_RETURN_DATA;
+}
+
+int __declspec(dllexport) __stdcall try_sapi(HWND mWnd, HWND aWnd, wchar_t *data, wchar_t *parms, BOOL show, BOOL nopause) {
+    if (!_wcsicmp(data, L"1")) {
+        Tolk_TrySAPI(TRUE);
+    }
+    else {
+        Tolk_TrySAPI(FALSE);
+    }
+    return MIRC_RETURN_CONTINUE;
+}
+
+int __declspec(dllexport) __stdcall prefer_sapi(HWND mWnd, HWND aWnd, wchar_t *data, wchar_t *parms, BOOL show, BOOL nopause) {
+    if (!_wcsicmp(data, L"1")) {
+        Tolk_PreferSAPI(TRUE);
+    }
+    else {
+        Tolk_PreferSAPI(FALSE);
+    }
+    return MIRC_RETURN_CONTINUE;
 }
